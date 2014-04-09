@@ -1,0 +1,5 @@
+[18-Aug-2013 17:07:24] PHP Fatal error:  Class 'WP_Widget' not found in /home2/midnigt5/public_html/wp-content/plugins/pods/classes/widgets/PodsWidgetList.php on line 5
+[18-Aug-2013 17:07:32] PHP Fatal error:  Class 'WP_Widget' not found in /home2/midnigt5/public_html/wp-content/plugins/pods/classes/widgets/PodsWidgetForm.php on line 5
+[18-Aug-2013 17:07:34] PHP Fatal error:  Class 'WP_Widget' not found in /home2/midnigt5/public_html/wp-content/plugins/pods/classes/widgets/PodsWidgetSingle.php on line 5
+[18-Aug-2013 17:07:36] PHP Fatal error:  Class 'WP_Widget' not found in /home2/midnigt5/public_html/wp-content/plugins/pods/classes/widgets/PodsWidgetField.php on line 5
+[18-Aug-2013 17:07:37] PHP Fatal error:  Class 'WP_Widget' not found in /home2/midnigt5/public_html/wp-content/plugins/pods/classes/widgets/PodsWidgetView.php on line 5

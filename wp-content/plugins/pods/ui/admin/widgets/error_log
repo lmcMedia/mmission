@@ -1,0 +1,5 @@
+[18-Aug-2013 17:06:23] PHP Fatal error:  Using $this when not in object context in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/widgets/list.php on line 15
+[18-Aug-2013 17:06:56] PHP Fatal error:  Using $this when not in object context in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/widgets/single.php on line 15
+[18-Aug-2013 17:07:04] PHP Fatal error:  Using $this when not in object context in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/widgets/view.php on line 15
+[18-Aug-2013 17:07:08] PHP Fatal error:  Using $this when not in object context in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/widgets/field.php on line 15
+[18-Aug-2013 17:07:57] PHP Fatal error:  Using $this when not in object context in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/widgets/form.php on line 15

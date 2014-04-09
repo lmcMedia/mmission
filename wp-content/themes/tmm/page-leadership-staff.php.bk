@@ -1,0 +1,117 @@
+<?php get_header(); ?>
+<div id="main-bgtop"></div>
+<div id="main" class="group">
+	<?php get_sidebar(); ?>
+	<div class="right-col">
+		<div id="ctn-left">
+			<h2 class="cnt-title">Board, Senior Staff</h2>
+			<div class="lea-cnt">
+				<p class="leader-title">Board</p>
+				<div class="leader-cnt">
+					<ul class="lea_member">
+						<?php 
+						$args = array( 'post_type' => 'staff',
+										'posts_per_page' => -1,
+										'meta_query' => array(
+											array(
+									           'key' => 'is_leadership',
+									           'value' => 1,
+									           'compare' => '=',
+									       	),
+										),
+								);
+							
+							
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) : $loop->the_post();
+							
+						$avatar = get_post_meta(get_the_ID(), 'avatar', true);
+						$avatarURL = wp_get_attachment_image_src($avatar['ID'],'full');
+						
+						$role = get_post_meta(get_the_ID(), 'role', true);?>
+						<li>
+							<div class="lea-image">
+								<?php if($avatarURL[0] == ''){?>
+								<img
+									src="<?php echo IMAGES ?>/lea_image.jpg"
+									alt="<?php the_title()?>" />
+								<?php } else { ?>
+									<img
+									src="<?php echo $avatarURL[0] ?>"
+									alt="<?php the_title()?>" />
+								<?php }?>
+							</div>
+							<p class="lea-name"><a href="<?php echo get_permalink() ?>"><?php the_title()?></a></p>
+							<p class="lea-position"><?php echo $role; ?></p>
+						</li>
+						<?php
+						endwhile;
+						?>
+					</ul>
+					<span class="clear"></span>
+				</div>
+				<p class="senior-title">Senior Leadership</p>
+				<div class="senior-cnt">
+					<ul class="lea-senior">
+						<?php 
+						$args = array( 'post_type' => 'staff',
+										'posts_per_page' => -1,
+										'meta_query' => array(
+											array(
+									           'key' => 'is_senior_leadership',
+									           'value' => 1,
+									           'compare' => '=',
+									       )
+								));
+							
+							
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) : $loop->the_post();
+							
+						$avatar = get_post_meta(get_the_ID(), 'avatar', true);
+						$avatarURL = wp_get_attachment_image_src($avatar['ID'],'full');
+						
+						$role = get_post_meta(get_the_ID(), 'role', true);?>
+						<li>
+							<div class="lea-image">
+								<?php if($avatarURL == ''){?>
+								<img
+									src="<?php echo IMAGES ?>/lea_image.jpg"
+									alt="<?php the_title()?>">
+								<?php } else { ?>
+									<img
+									src="<?php echo $avatarURL[0] ?>"
+									alt="<?php the_title()?>">
+								<?php }?>
+							</div>
+							<p class="lea-name"><a href="<?php echo get_permalink() ?>"><?php the_title()?></a></p>
+							<p class="lea-position"><?php echo $role; ?></p>
+						</li>
+						<?php
+						endwhile;
+						?>
+
+					</ul>
+					<span class="clear"></span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div id="main-bgbottom"></div>
+		</div>
+		<!-- End Main Area -->
+			
+		</div>
+		<!--end container-->
+	</div>
+	<!--Footer Information-->
+	<?php get_footer(); ?>
+	<!-- End Footer Information -->
+	
+	 <?php wp_footer(); ?> 
+	 
+	 <?php //print get_option('director_analytics'); ?>
+</body>
+</html>

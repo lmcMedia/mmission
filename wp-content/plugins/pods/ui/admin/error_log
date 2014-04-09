@@ -1,0 +1,26 @@
+[18-Aug-2013 17:05:52] PHP Fatal error:  Call to undefined function  __() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/settings.php on line 11
+[18-Aug-2013 17:05:53] PHP Fatal error:  Call to undefined function  wp_create_nonce() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/shortcode.php on line 169
+[18-Aug-2013 17:05:54] PHP Fatal error:  Class 'PodsForm' not found in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/components-admin.php on line 5
+[18-Aug-2013 17:07:10] PHP Fatal error:  Call to undefined function  wp_enqueue_script() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/form-settings.php on line 2
+[18-Aug-2013 17:08:08] PHP Fatal error:  Call to undefined function  _e() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/help.php on line 3
+[18-Aug-2013 17:08:26] PHP Warning:  Invalid argument supplied for foreach() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/field-option.php on line 4
+[18-Aug-2013 17:08:33] PHP Fatal error:  Call to undefined function  pods_var() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/settings-reset.php on line 22
+[18-Aug-2013 17:08:35] PHP Fatal error:  Call to undefined function  _e() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/settings-settings.php on line 1
+[19-Nov-2013 05:47:11] PHP Fatal error:  Class 'PodsForm' not found in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/components-admin.php on line 5
+[19-Nov-2013 05:47:16] PHP Fatal error:  Call to undefined function  pods_var() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/settings-tools.php on line 9
+[19-Nov-2013 05:47:18] PHP Fatal error:  Call to undefined function  wp_enqueue_script() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/form.php on line 2
+[19-Nov-2013 05:47:21] PHP Fatal error:  Call to undefined function  wp_create_nonce() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/shortcode.php on line 169
+[19-Nov-2013 05:47:22] PHP Fatal error:  Call to undefined function  __() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/settings.php on line 11
+[19-Nov-2013 05:47:30] PHP Fatal error:  Call to undefined function  _e() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/help.php on line 3
+[19-Nov-2013 05:47:31] PHP Warning:  Invalid argument supplied for foreach() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/field-option.php on line 4
+[19-Nov-2013 05:47:32] PHP Fatal error:  Call to undefined function  pods_var() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/settings-reset.php on line 22
+[19-Nov-2013 05:47:33] PHP Fatal error:  Call to undefined function  _e() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/settings-settings.php on line 1
+[19-Nov-2013 05:47:38] PHP Fatal error:  Call to undefined function  wp_create_nonce() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/setup-add.php on line 11
+[19-Nov-2013 05:47:40] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/setup-edit-field-fluid.php on line 2
+[19-Nov-2013 05:47:40] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/setup-edit-field-fluid.php on line 2
+[19-Nov-2013 05:47:40] PHP Warning:  Invalid argument supplied for foreach() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/setup-edit-field-fluid.php on line 8
+[19-Nov-2013 05:47:40] PHP Fatal error:  Call to undefined function  pods_var() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/setup-edit-field-fluid.php on line 15
+[19-Nov-2013 05:47:43] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/setup-edit-field.php on line 2
+[19-Nov-2013 05:47:43] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #2 is not an array in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/setup-edit-field.php on line 2
+[19-Nov-2013 05:47:43] PHP Fatal error:  Call to undefined function  pods_var() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/setup-edit-field.php on line 5
+[19-Nov-2013 05:47:44] PHP Fatal error:  Call to undefined function  pods_api() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/admin/setup-edit.php on line 4

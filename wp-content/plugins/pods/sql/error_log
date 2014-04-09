@@ -1,0 +1,2 @@
+[24-Feb-2014 05:39:01 America/Denver] PHP Notice:  Undefined variable: pods_version in /home2/midnigt5/public_html/wp-content/plugins/pods/sql/update.php on line 7
+[24-Feb-2014 05:39:01 America/Denver] PHP Fatal error:  Call to undefined function pods_query() in /home2/midnigt5/public_html/wp-content/plugins/pods/sql/update.php on line 9

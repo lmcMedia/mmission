@@ -1,0 +1,9 @@
+[18-Aug-2013 17:06:54] PHP Fatal error:  Call to undefined function  pods_shortcode() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/front/widgets.php on line 7
+[18-Aug-2013 17:06:57] PHP Fatal error:  Call to undefined function  esc_attr() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/front/filters.php on line 1
+[19-Nov-2013 05:46:05] PHP Fatal error:  Call to undefined function  pods_shortcode() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/front/widgets.php on line 7
+[19-Nov-2013 05:46:07] PHP Fatal error:  Call to undefined function  esc_attr() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/front/filters.php on line 1
+[19-Nov-2013 05:46:21] PHP Fatal error:  Call to undefined function  wp_enqueue_style() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/front/form.php on line 2
+[24-Feb-2014 05:37:31 America/Denver] PHP Notice:  Undefined variable: before_widget in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/front/widgets.php on line 2
+[24-Feb-2014 05:37:31 America/Denver] PHP Fatal error:  Call to undefined function pods_shortcode() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/front/widgets.php on line 7
+[24-Feb-2014 05:37:32 America/Denver] PHP Fatal error:  Call to undefined function esc_attr() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/front/filters.php on line 1
+[24-Feb-2014 05:37:45 America/Denver] PHP Fatal error:  Call to undefined function wp_enqueue_style() in /home2/midnigt5/public_html/wp-content/plugins/pods/ui/front/form.php on line 2
