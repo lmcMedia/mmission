@@ -5,17 +5,15 @@
 <link REL="SHORTCUT ICON"
 	href="<?php echo IMAGES?>/midnight_mission.ico" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <!-- 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
  -->
-<!-- 
-<link rel="stylesheet" type="text/css"
-	href="<?= CSS ?>/magnific-popup.css" />
- -->
-<link rel="stylesheet" href="<?= CSS ?>/owl.carousel.css" type="text/css" />
-<link rel="stylesheet" href="<?= CSS ?>/owl.transitions.css" type="text/css" />
-	
+<!-- <link rel="stylesheet" type="text/css"
+	href="<?= CSS ?>/magnific-popup.css" /> -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="<?= CSS ?>/flexslider.css"/>
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/responsive.css" />
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -25,11 +23,9 @@
 
 <script
 	src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/TweenMax.min.js"></script>
-<!--
-<script type="text/javascript"
-	src="<?= JS ?>/jquery.magnific-popup.min.js"></script>
--->
-<script type="text/javascript" src="<?= JS ?>/owl.carousel.js"></script>
+<!--<script type="text/javascript"
+	src="<?= JS ?>/jquery.magnific-popup.min.js"></script>-->	
+<script type="text/javascript" src="<?= JS ?>/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 <script type="text/javascript" src="<?= JS ?>/main.js"></script>
 
@@ -104,25 +100,27 @@
 		<div class="home-content wrap">
 			<div class="home-slider">
 				<div class="container">
-					<div id="owl-demo" class="owl-carousel">
-		               <div class="slide slide1">
+					<div class="flexslider">
+						<ul class="slides">
+		               	<li>
 				    		<img src="<?= IMAGES ?>/home/slider1.jpg">
-				    	</div>
-				    	<div class="slide slide2">
+				    	</li>
+				    	<li>
 				    		<img src="<?= IMAGES ?>/home/slider2.jpg">
-				    	</div>
-				    	<div class="slide slide3">
+				    	</li>
+				    	<li>
 				    		<img src="<?= IMAGES ?>/home/slider3.jpg">
-				    	</div>
-				    	<div class="slide slide4">
+				    	</li>
+				    	<li>
 				    		<img src="<?= IMAGES ?>/home/slider4.jpg">
-				    	</div>
-				    	<div class="slide slide5">
+				    	</li>
+				    	<li>
 				    		<img src="<?= IMAGES ?>/home/slider5.jpg">
-				    	</div>
-				    	<div class="slide slide6">
+				    	</li>
+				    	<li>
 				    		<img src="<?= IMAGES ?>/home/slider6.jpg">
-				    	</div>
+				    	</li>
+				    	</ul>
 					</div>
 					<div class="video-container" style="display: block">
 						<div class="videoWrapper"  >
@@ -135,51 +133,64 @@
 			
 			<div class="container">
 				<article>
-					<div class="double">
-						<a target="_blank" href="news-events/newsletter/">
-							<img src="wp-content/uploads/2014/02/bldg-logo-tout.png" alt="">
-						</a>
-						<p><a target="_blank" href="news-events/newsletter/">Spring 2014 Newsletter</a></p>
+					<div class="double shadow">
+						<div id="tabs" style="display: block; width: 100%; height: 100%;">
+							<ul>
+								<li><a class="tab-tweets" href="#tabs-1"></a></li>
+								<li><a class="tab-facebook" href="#tabs-2"></a></li>
+								<li><a class="tab-tumblr" href="#tabs-3"></a></li>
+							</ul>
+							<div id="tabs-1">
+								<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+							</div>
+							<div id="tabs-2">
+								<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+							</div>
+							<div id="tabs-3">
+								<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+								<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+							</div>
+						</div>
 					</div>
 					<div class="double-after">
 					</div>
 					
-					<div>
-						<a target="_blank" href="event-content/golf-2014/">
-							<img src="wp-content/uploads/2014/02/golf-tout.png" alt="">
+					<div class="shadow">
+						<a target="_blank" href="#">
+							<img src="<?= IMAGES ?>/home/box1.jpg" alt="">
 						</a>
-						<p><a target="_blank" href="event-content/golf-2014/">Annual Golf Tournament</a></p>
+						<p><a target="_blank" href="#">Learn About Our Mission</a></p>
 					</div>
-					<div>
-						<a target="_blank" href="event-content/the-midnight-missions-5k10k-runwalk/">
-							<img src="wp-content/uploads/2014/03/5K_logohome.png" alt="">
+					<div class="shadow">
+						<a target="_blank" href="#">
+							<img src="<?= IMAGES ?>/home/box2.jpg" alt="">
 						</a>
-						<p><a target="_blank" href="event-content/the-midnight-missions-5k10k-runwalk/">5k/10k Run/Walk</a></p>
+						<p><a target="_blank" href="#">Our Community</a></p>
 					</div>
 					
-					<div>
-						<a target="_blank" href="news-events/newsletter/">
-							<img src="wp-content/uploads/2014/02/bldg-logo-tout.png" alt="">
+					<div class="shadow">
+						<a target="_blank" href="#">
+							<img src="<?= IMAGES ?>/home/box3.jpg" alt="">
 						</a>
-						<p><a target="_blank" href="news-events/newsletter/">Spring 2014 Newsletter</a></p>
+						<p><a target="_blank" href="#">The Many Ways You Can Help</a></p>
 					</div>
-					<div>
-						<a target="_blank" href="/event-content/nowruz-2014/">
-							<img src="wp-content/uploads/2014/02/nowruz-tout.png" alt="">
+					<div class="shadow">
+						<a target="_blank" href="#">
+							<img src="<?= IMAGES ?>/home/box4.jpg" alt="">
 						</a>
-						<p><a target="_blank" href="/event-content/nowruz-2014/">Nowruz 2014</a></p>
+						<p><a target="_blank" href="#">Lorem Ipsum</a></p>
 					</div>
-					<div>
-						<a target="_blank" href="event-content/golf-2014/">
-							<img src="wp-content/uploads/2014/02/golf-tout.png" alt="">
+					<div class="shadow">
+						<a target="_blank" href="#">
+							<img src="<?= IMAGES ?>/home/box5.jpg" alt="">
 						</a>
-						<p><a target="_blank" href="event-content/golf-2014/">Annual Golf Tournament</a></p>
+						<p><a target="_blank" href="#">Lorem Ipsum</a></p>
 					</div>
-					<div>
-						<a target="_blank" href="event-content/the-midnight-missions-5k10k-runwalk/">
-							<img src="wp-content/uploads/2014/03/5K_logohome.png" alt="">
+					<div class="shadow">
+						<a target="_blank" href="#">
+							<img src="<?= IMAGES ?>/home/box6.jpg" alt="">
 						</a>
-						<p><a target="_blank" href="event-content/the-midnight-missions-5k10k-runwalk/">5k/10k Run/Walk</a></p>
+						<p><a target="_blank" href="#">How to Get Help</a></p>
 					</div>
 				</article>
 			</div>
