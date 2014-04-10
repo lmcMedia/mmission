@@ -12,7 +12,6 @@
  -->
 <!-- <link rel="stylesheet" type="text/css"
 	href="<?= CSS ?>/magnific-popup.css" /> -->
-<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/flexslider.css"/>
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/responsive.css" />
 
@@ -26,14 +25,34 @@
 <!--<script type="text/javascript"
 	src="<?= JS ?>/jquery.magnific-popup.min.js"></script>-->	
 <script type="text/javascript" src="<?= JS ?>/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 <script type="text/javascript" src="<?= JS ?>/main.js"></script>
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 
 <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 
 </head>
 
 <body>
+<!-- 
+	<div id="fb-root"></div>
+	<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1401841393413738',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+	 -->
 	<div class="wrap">
 		<header>
 			<div class="header-top">
@@ -134,22 +153,23 @@
 			<div class="container">
 				<article>
 					<div class="double shadow">
-						<div id="tabs" style="display: block; width: 100%; height: 100%;">
-							<ul>
-								<li><a class="tab-tweets" href="#tabs-1"></a></li>
-								<li><a class="tab-facebook" href="#tabs-2"></a></li>
-								<li><a class="tab-tumblr" href="#tabs-3"></a></li>
+						<div class="tabs" style="display: block; width: 100%; height: 100%;">
+							<ul class="title">
+								<li class="active"><a class="tab-tweets" ></a></li>
+								<li><a class="tab-facebook"></a></li>
+								<li><a class="tab-tumblr"></a></li>
 							</ul>
-							<div id="tabs-1">
-								<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-							</div>
-							<div id="tabs-2">
-								<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-							</div>
-							<div id="tabs-3">
-								<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-								<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-							</div>
+							<ul class="content">
+								<li id="tabs-1">							
+									<p>Twitter</p>
+								</li>
+								<li id="tabs-2" style="display: none;">							
+									<p>Facebook</p>
+								</li>
+								<li id="tabs-3" style="display: none;">								
+									<p>Tumblr</p>
+								</li>
+							</ul>
 						</div>
 					</div>
 					<div class="double-after">

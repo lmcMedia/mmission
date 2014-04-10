@@ -128,6 +128,7 @@ header {
 	background: -o-linear-gradient( #2f2f2f, #000000 );
 	background: -ms-linear-gradient( #2f2f2f, #000000 );
 	background: linear-gradient( #2f2f2f, #000000 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f2f', endColorstr='#000000',GradientType=0 );
 	min-height: 100px;
 }
 
@@ -297,9 +298,9 @@ ul.header-buttons .stories:hover, ul.header-buttons .stories.down {
 }
 
 .home-slider {
-	background: url("../images/home/background-slider.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+	background: url("../images/home/background-slider.jpg") repeat scroll center center rgba(0, 0, 0, 0) !important;
 	background-size: 100% auto;
-	max-height: 403px;
+	max-height: 395px;
 }
 
 .home-container {
@@ -381,7 +382,9 @@ article > div {
     height: 160px;
 }
 article > div.double {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);    
+    border-radius: 0;
+    box-shadow: none;
     margin-right: 2%;
     width: 49%;
 }
@@ -392,7 +395,7 @@ article > div.double-after {
 article > div:nth-child(4n+4) {
     margin-right: 0;
 }
-article > div:hover {
+article > div:not(.double):hover {
     background-color: #B4D0FA;
 }
 
@@ -551,70 +554,95 @@ footer {
 	}
 }
 
-#tabs {
+.tabs {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;
     margin: 0;
     padding: 0;
 }
 
-.ui-widget-header {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: medium none;
-}
-.ui-tabs .ui-tabs-nav {
-	padding: 0;
-}
-.ui-tabs .ui-tabs-nav li {
-	margin: 0;	
+.tabs ul {
+	display: list-item;
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
-.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-	border: medium none;
-	padding: 0;
+.tabs ul.title {
+	height: 20%;
+    position: absolute;
+    z-index: 2;
 }
 
+.tabs ul.title li {
+	background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    display: inline-block;
+    margin-right: -5px;
+}
 
+.tabs ul.title li.active {
+	border-bottom: none;
+}
 
-li.ui-state-default .tab-tweets {
+li .tab-tweets {
 	background: url("../images/home/feeds.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	cursor: pointer;
     display: block;
     height: 14px;
-    margin: 6px;
+    margin: 9px;
     width: 68px;
 }
-li.ui-state-default .tab-tweets:hover, li.ui-tabs-active .tab-tweets {
+li.active .tab-tweets, .tab-tweets:hover {
 	background-position: 0 -14px;
 }
 
 
-li.ui-state-default .tab-facebook {
+li .tab-facebook {
 	background: url("../images/home/feeds.png") no-repeat scroll -68px 0 rgba(0, 0, 0, 0);
     cursor: pointer;
     display: block;
     height: 14px;
-    margin: 6px;
+    margin: 9px;
     width: 80px;
 }
-li.ui-state-default .tab-facebook:hover, li.ui-tabs-active .tab-facebook {
+li.active .tab-facebook, .tab-facebook:hover {
 	background-position: -68px -14px;
 }
 
 
-li.ui-state-default .tab-tumblr {
+li .tab-tumblr {
 	background: url("../images/home/feeds.png") no-repeat scroll -148px 0 rgba(0, 0, 0, 0);
    	cursor: pointer;
     display: block;
     height: 14px;
-    margin: 6px;
+    margin: 9px;
     width: 58px;
 }
-li.ui-state-default .tab-tumblr:hover, li.ui-tabs-active .tab-tumblr {
+li.active .tab-tumblr, .tab-tumblr:hover {
 	background-position: -148px -14px;
 }
 
 
-.ui-tabs .ui-tabs-panel {
-	background: #FFFFFF;
+.tabs ul.content {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    bottom: 0;
+    color: #003666;
+    height: 78%;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.tabs ul.content li {
+	display: block;
+    height: 76%;
+    margin: 2% 3%;
+    overflow: auto;
+    width: 94%;
 }
