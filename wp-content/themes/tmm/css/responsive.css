@@ -298,9 +298,19 @@ ul.header-buttons .stories:hover, ul.header-buttons .stories.down {
 }
 
 .home-slider {
-	background: url("../images/home/background-slider.jpg") repeat scroll center center rgba(0, 0, 0, 0) !important;
-	background-size: 100% auto;
 	max-height: 395px;
+	position: relative;	
+}
+
+.home-slider-bg {
+	background: url("../images/home/background-slider.jpg");
+	background-position: center center !important; 
+    background-repeat: no-repeat;
+	height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .home-container {
@@ -319,6 +329,13 @@ ul.header-buttons .stories:hover, ul.header-buttons .stories.down {
 /* 					YOUTUBE VIDEO				 */
 /* ============================================= */
 
+.video-wrap {
+	height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
 .video-container {
 	background-color: #000000;
@@ -385,6 +402,7 @@ article > div.double {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);    
     border-radius: 0;
     box-shadow: none;
+    cursor: auto;
     margin-right: 2%;
     width: 49%;
 }
@@ -625,7 +643,6 @@ li.active .tab-tumblr, .tab-tumblr:hover {
 	background-position: -148px -14px;
 }
 
-
 .tabs ul.content {
 	background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #DDDDDD;
@@ -640,9 +657,96 @@ li.active .tab-tumblr, .tab-tumblr:hover {
 }
 
 .tabs ul.content li {
-	display: block;
-    height: 76%;
-    margin: 2% 3%;
+    display: block;
+    height: 99%;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.tabs ul.content li > div {
+	height: 100%;
     overflow: auto;
-    width: 94%;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: inherit;
+    width: 90%;
+}
+
+.social-nav {
+	position: absolute;
+	top: 10px;
+	right: 10px;	
+}
+
+.social-nav .social-previous {
+	background: url("../images/home/social_arrow.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 16px;
+    width: 13px;
+}
+.social-nav .social-previous:hover {
+	background-position: 0 -16px;
+}
+
+.social-nav .social-next {
+	background: url("../images/home/social_arrow.png") no-repeat scroll -13px 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 16px;
+    width: 13px;
+}
+.social-nav .social-next:hover {
+	background-position: -13px -16px;
+}
+
+
+.social-div {
+	background: url("../images/home/social_div.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+   	display: inline-block;
+	width: 3px;
+	height: 16px;
+}
+
+.tab-content > div {	
+	display: inline-block;
+}
+.tab-content > div p {	
+	color: #003666;
+	display: inline;
+    font-family: 'HelveticaNeue-Light';
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tabs ul.content li {
+	clear: both;
+}
+
+.tabs ul.content li ul.tweets {
+	list-style: none;
+    margin-left: 15px;
+}
+
+
+.tabs ul.content li ul.tweets li {
+	clear: both;
+	display: list-item;
+    list-style: disc outside none;
+}
+
+
+.tabs ul.content li ul.facebooks {
+	list-style: none;
+    margin-left: 15px;
+}
+
+
+.tabs ul.content li ul.facebooks li {
+	clear: both;
+	display: list-item;
+    list-style: disc outside none;
 }

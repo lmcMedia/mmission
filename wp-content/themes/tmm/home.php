@@ -7,11 +7,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
 <!-- 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
  -->
 <!-- <link rel="stylesheet" type="text/css"
 	href="<?= CSS ?>/magnific-popup.css" /> -->
+<link rel="stylesheet" type="text/css" href="<?= CSS ?>/jquery.mCustomScrollbar.css"/>
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/flexslider.css"/>
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/responsive.css" />
 
@@ -24,7 +26,11 @@
 	src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/TweenMax.min.js"></script>
 <!--<script type="text/javascript"
 	src="<?= JS ?>/jquery.magnific-popup.min.js"></script>-->	
+	
+<script type="text/javascript" src="<?= JS ?>/blur.min.js"></script>
 <script type="text/javascript" src="<?= JS ?>/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="<?= JS ?>/jquery.mCustomScrollbar.min.js"></script>
+
 <script type="text/javascript" src="<?= JS ?>/main.js"></script>
 <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 
@@ -118,6 +124,8 @@
 		</header>
 		<div class="home-content wrap">
 			<div class="home-slider">
+				<div class="home-slider-bg">
+				</div>
 				<div class="container">
 					<div class="flexslider">
 						<ul class="slides">
@@ -142,13 +150,15 @@
 				    	</ul>
 					</div>
 					<div class="video-container" style="display: block">
-						<div class="videoWrapper"  >
+						<div class="videoWrapper">
 							<div id="player"></div>		
 						</div>
 						<a class="close-video close-video-home"></a>
 					</div>
 				</div>
 			</div>
+			<?php session_start(); ?>
+			<?php include 'functions/plugins/twitter/twitters.php'; ?>
 			
 			<div class="container">
 				<article>
@@ -160,16 +170,42 @@
 								<li><a class="tab-tumblr"></a></li>
 							</ul>
 							<ul class="content">
-								<li id="tabs-1">							
-									<p>Twitter</p>
+								<li id="tabs-1" class="tab-content">
+									<div style="height: 80%; margin-top: 10px;">
+										<ul class="tweets">
+											<?php foreach($tweetsArr as $tw) { ?>
+											<li>										
+												<p><span style="font-family: 'HelveticaNeue-Bold';">#<?= $tw['username'] ?></span> <?= $tw['created_at'] ?></p>
+												<p style="display: block;"><?= $tw['text'] ?></p>
+												<p><a href="<?= $tw['url'] ?>" target="_blank" style="color: #8dd6f5; display: block; text-align: right;">Read on Twitter</a></p>
+											</li>
+											<?php } ?>
+										</ul>										
+									</div>									
 								</li>
-								<li id="tabs-2" style="display: none;">							
-									<p>Facebook</p>
+								<li id="tabs-2" class="tab-content">							
+									<div style="height: 80%; margin-top: 10px;">
+										<ul class="facebooks">
+										</ul>
+									</div>
 								</li>
-								<li id="tabs-3" style="display: none;">								
-									<p>Tumblr</p>
+								<li id="tabs-3" class="tab-content">								
+									<div style="height: 80%; margin-top: 10px;">
+										<ul class="tumblr">
+											<?php foreach($tweetsArr as $tw) { ?>
+											<li>										
+												
+											</li>
+											<?php } ?>
+										</ul>										
+									</div>		
 								</li>
 							</ul>
+						</div>
+						<div class="social-nav">
+							<a class="social-previous"></a>
+							<div class="social-div"></div>
+							<a class="social-next"></a>
 						</div>
 					</div>
 					<div class="double-after">
