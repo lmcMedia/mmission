@@ -418,12 +418,15 @@ article > div:not(.double):hover {
 }
 
 article > div img {
-	border-radius: 15px;
+    border-radius: 15px;
     margin: 0 auto;
-    max-width: 96%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 2%;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 7px 0 0;
+    
+    -moz-box-shadow:    0 2px 0 0 #CCCCCC;
+	-webkit-box-shadow: 0 2px 0 0 #CCCCCC;
+	box-shadow:         0 2px 0 0 #CCCCCC;
 }
 
 article > div p {
@@ -484,19 +487,19 @@ footer {
 }
 
 @media screen and (max-width: 960px) {
-	article div {
+	article > div {
 	    margin-right: 4%;
 	    width: 30%;
 	    height: 160px;
 	}
-	article div.double {
+	article > div.double {
 		margin-right: 4%;
 	    width: 64%;
 	}
-	article div:nth-child(4n+4) {
+	article > div:nth-child(4n+4) {
 	    margin-right: 4%;
 	}
-	article div:nth-child(3n+3) {
+	article > div:nth-child(3n+3) {
 	    margin-right: 0%;
 	}
 }
@@ -507,6 +510,25 @@ footer {
 		padding-right: 2%;
 		text-align: center;
 		width: 96%;
+	}
+	
+	article > div {
+	    margin-right: 4%;
+	    width: 30%;
+	    height: 160px;
+	}
+	article > div.double {
+		margin-right: 0%;
+	    width: 100%;
+	}
+	article > div:nth-child(4n+4) {
+	    margin-right: 4%;
+	}
+	article > div:nth-child(3n+3) {
+	    margin-right: 4%;
+	}
+	article > div:nth-child(3n+5) {
+	    margin-right: 0%;
 	}
 }
 
@@ -537,22 +559,22 @@ footer {
 		width: 90%;
 	}
 	
-	article div {
+	article > div {
 	    margin-right: 5%;
 	    width: 47%;
 	    height: auto;
 	}
-	article div.double {
+	article > div.double {
 		margin-right: 0%;
 	    width: 100%;
 	}
-	article div:nth-child(4n+4) {
+	article > div:nth-child(4n+4) {
 	    margin-right: 5%;
 	}
-	article div:nth-child(3n+3) {
+	article > div:nth-child(3n+3) {
 	    margin-right: 5%;
 	}
-	article div:nth-child(2n+2) {
+	article > div:nth-child(2n+2) {
 	    margin-right: 0%;
 	}
 }
@@ -575,8 +597,11 @@ footer {
 .tabs {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;
+    height: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
+    width: 100%;
 }
 
 .tabs ul {
@@ -588,7 +613,6 @@ footer {
 
 .tabs ul.title {
 	height: 20%;
-    position: absolute;
     z-index: 2;
 }
 
@@ -617,7 +641,6 @@ li.active .tab-tweets, .tab-tweets:hover {
 	background-position: 0 -14px;
 }
 
-
 li .tab-facebook {
 	background: url("../images/home/feeds.png") no-repeat scroll -68px 0 rgba(0, 0, 0, 0);
     cursor: pointer;
@@ -641,36 +664,6 @@ li .tab-tumblr {
 }
 li.active .tab-tumblr, .tab-tumblr:hover {
 	background-position: -148px -14px;
-}
-
-.tabs ul.content {
-	background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #DDDDDD;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    bottom: 0;
-    color: #003666;
-    height: 78%;
-    left: 0;
-    position: absolute;
-    right: 0;
-}
-
-.tabs ul.content li {
-    display: block;
-    height: 99%;
-    margin: 0;
-    position: relative;
-    width: 100%;
-}
-
-.tabs ul.content li > div {
-	height: 100%;
-    overflow: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-    position: inherit;
-    width: 90%;
 }
 
 .social-nav {
@@ -707,12 +700,52 @@ li.active .tab-tumblr, .tab-tumblr:hover {
 	height: 16px;
 }
 
-.tab-content > div {	
-	display: inline-block;
+
+.tabs ul.content {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    bottom: 0;
+    color: #003666;
+    height: 79%;
+    left: 0;
+    right: 0;
 }
-.tab-content > div p {	
+
+.tabs ul.content > li {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.tabs ul.content > li > div {
+	bottom: 10px;
+    height: auto;
+    left: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: auto;
+    overflow: auto;
+}
+
+.tabs ul.content > li ul {
+	list-style: none;
+    margin-left: 20px;
+}
+
+.tabs ul.content > li ul li {
+	display: list-item;
+    list-style: disc outside none;
+}
+
+
+.tabs ul.content > li ul li p {	
 	color: #003666;
-	display: inline;
+	display: block;
     font-family: 'HelveticaNeue-Light';
     font-size: 14px;
     line-height: 20px;
@@ -722,31 +755,18 @@ li.active .tab-tumblr, .tab-tumblr:hover {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.tabs ul.content li {
-	clear: both;
+.tabs ul.content > li ul li p:first-child {
+	display: inline;
 }
 
-.tabs ul.content li ul.tweets {
-	list-style: none;
-    margin-left: 15px;
-}
-
-
-.tabs ul.content li ul.tweets li {
-	clear: both;
-	display: list-item;
-    list-style: disc outside none;
+.tabs ul.content > li ul li p a {
+	color: #8DD6F5;
+	font-family: 'HelveticaNeue-Light';
+    font-size: 14px;
+    line-height: 16px;    
 }
 
 
-.tabs ul.content li ul.facebooks {
-	list-style: none;
-    margin-left: 15px;
-}
-
-
-.tabs ul.content li ul.facebooks li {
-	clear: both;
-	display: list-item;
-    list-style: disc outside none;
+.mCustomScrollBox  {
+	width: 100%;
 }

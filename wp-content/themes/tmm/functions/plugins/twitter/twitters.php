@@ -1,20 +1,20 @@
 <?php
 require_once ('twitteroauth.php');
 
-$tw_user = 'LM_Creative';
-$tw_consumerkey = 'bM0yamQCnKVBQT8xpwTjQ';
-$tw_consumersecret = 'MoXMnacYkmiG8z3smeEfxDeM7C3UJFoBQGh96CCnQ';
-$tw_accesstoken = '159658571-zFollxQuy5u1KitWk6MdwiTG70OogH2uMMBlkx3M';
-$tw_accesstokensecret = 'B1iBfiTHcV7G5ZilJDTKcvKwkv2YR7i0zR0Hhd1oCdSOz';
-$notweets = 30;
+$tw_user = 'MidniteMission';
+$tw_consumerkey = 'prjUeqvZBanhjy52WyBrckMCu';
+$tw_consumersecret = 'y5Oy3MRWdEXJmNIrWGhOTlLW7pbMb5KWvPlWln2xVrQehaVZ4q';
+$tw_accesstoken = '264490826-hbQZDObFuK8bgLTeCBQiqsL6t6VSjDN4mhmhMkVR';
+$tw_accesstokensecret = 'a3zjFGfAfEAeTxW4x8ZcyUbBgsLDrDkotLzZ4SvkOVFbG';
+$notweets = 20;
 
 function addLinks($data) {
+	$data = preg_replace("#(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t< ]*)#", "\\1\\2", $data);
+	$data = preg_replace("#(^|[\n ])((www|ftp)\.[^ \"\t\n\r< ]*)#", "\\1\\2", $data);
 	
-	$data = preg_replace("#(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t< ]*)#", "\\1<a target=\"_blank\" href=\"\\2\" >\\2</a>", $data);
-	$data = preg_replace("#(^|[\n ])((www|ftp)\.[^ \"\t\n\r< ]*)#", "\\1<a target=\"_blank\" href=\"http://\\2\" >\\2</a>", $data);
 	$data = preg_replace("/RT @(\w+):/", "@\\1", $data);
-	$data = preg_replace("/@(\w+)/", "<a target=\"_blank\" href=\"http://www.twitter.com/\\1\" >@\\1</a>", $data);
-	$data = preg_replace("/#(\w+)/", "<a target=\"_blank\" href=\"https://twitter.com/search?q=\\1\" >#\\1</a>", $data);
+	$data = preg_replace("/@(\w+)/", "@\\1", $data);
+	$data = preg_replace("/#(\w+)/", "#\\1", $data);
 	
 	return $data;
 }

@@ -163,7 +163,7 @@
 			<div class="container">
 				<article>
 					<div class="double shadow">
-						<div class="tabs" style="display: block; width: 100%; height: 100%;">
+						<div class="tabs">
 							<ul class="title">
 								<li class="active"><a class="tab-tweets" ></a></li>
 								<li><a class="tab-facebook"></a></li>
@@ -171,32 +171,27 @@
 							</ul>
 							<ul class="content">
 								<li id="tabs-1" class="tab-content">
-									<div style="height: 80%; margin-top: 10px;">
+									<div id="tabs-1-container" >
 										<ul class="tweets">
 											<?php foreach($tweetsArr as $tw) { ?>
 											<li>										
 												<p><span style="font-family: 'HelveticaNeue-Bold';">#<?= $tw['username'] ?></span> <?= $tw['created_at'] ?></p>
 												<p style="display: block;"><?= $tw['text'] ?></p>
-												<p><a href="<?= $tw['url'] ?>" target="_blank" style="color: #8dd6f5; display: block; text-align: right;">Read on Twitter</a></p>
+												<p><a href="<?= $tw['url'] ?>" target="_blank" style="color: #8dd6f5; display: block; text-align: right;">Read more</a></p>
 											</li>
 											<?php } ?>
-										</ul>										
-									</div>									
+										</ul>
+									</div>						
 								</li>
 								<li id="tabs-2" class="tab-content">							
-									<div style="height: 80%; margin-top: 10px;">
+									<div id="tabs-2-container" >
 										<ul class="facebooks">
 										</ul>
 									</div>
 								</li>
 								<li id="tabs-3" class="tab-content">								
-									<div style="height: 80%; margin-top: 10px;">
-										<ul class="tumblr">
-											<?php foreach($tweetsArr as $tw) { ?>
-											<li>										
-												
-											</li>
-											<?php } ?>
+									<div id="tabs-3-container" >
+										<ul class="tumblrs">
 										</ul>										
 									</div>		
 								</li>
