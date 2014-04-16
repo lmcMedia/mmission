@@ -4,7 +4,7 @@
 <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 <link REL="SHORTCUT ICON" href="<?php echo IMAGES?>/midnight_mission.ico" type="image/x-icon" /> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+<meta name="viewport" content="width=1100">
 <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"
