@@ -5,18 +5,13 @@
 <link REL="SHORTCUT ICON"
 	href="<?php echo IMAGES?>/midnight_mission.ico" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=1100" />
 
-<!-- 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
- -->
-<!-- <link rel="stylesheet" type="text/css"
-	href="<?= CSS ?>/magnific-popup.css" /> -->
+<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/jquery.mCustomScrollbar.css"/>
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/flexslider.css"/>
-<link rel="stylesheet" type="text/css" href="<?= CSS ?>/responsive.css" />
-
+<link rel="stylesheet" type="text/css" href="<?= CSS ?>/responsive.css" media="screen"/>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -24,9 +19,7 @@
 
 <script
 	src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/TweenMax.min.js"></script>
-<!--<script type="text/javascript"
-	src="<?= JS ?>/jquery.magnific-popup.min.js"></script>-->	
-	
+
 <script type="text/javascript" src="<?= JS ?>/blur.min.js"></script>
 <script type="text/javascript" src="<?= JS ?>/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="<?= JS ?>/jquery.mCustomScrollbar.min.js"></script>
@@ -34,31 +27,10 @@
 <script type="text/javascript" src="<?= JS ?>/main.js"></script>
 <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 
-<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
-
+<?php wp_head(); ?>
 </head>
 
 <body>
-<!-- 
-	<div id="fb-root"></div>
-	<script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1401841393413738',
-          status     : true,
-          xfbml      : true
-        });
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/all.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-	 -->
 	<div class="wrap">
 		<header>
 			<div class="header-top">
@@ -94,16 +66,30 @@
 					
 					<?php $menu_slug = get_post_meta($post->ID, 'menu', true); ?>				
 					<ul class="main-menu">
-						<li class="<?php if($menu_slug == 'get-involved') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-492" id="menu-item-492">
-							<a href="<?php echo get_site_url()?>/get-involved/get-involved-1/">Get Involved</a></li>
-						<li class="<?php if($menu_slug == 'program-services') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-493" id="menu-item-493">
-							<a href="<?php echo get_site_url()?>/program-services/addiction-treatment/counselingcase-management/">Program Services</a></li>
-						<li class="<?php if($menu_slug == 'news-events') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-494" id="menu-item-494">
-							<a href="<?php echo get_site_url()?>/news-events/press/">News &amp; Events</a></li>
-						<li class="<?php if($menu_slug == 'about') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-495" id="menu-item-495">
-							<a href="<?php echo get_site_url()?>/about/mission-statement/">About</a>
-						<li class="<?php if($menu_slug == 'contact') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page lasted menu-item-496" id="menu-item-496">
-							<a href="<?php echo get_site_url()?>/contact/info/">Contact</a></li>
+						<li
+							class="<?php if($menu_slug == 'get-involved') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-492"
+							id="menu-item-492"><a style="font-family: 'Clarendon'; font-size: 16px !important;"
+							href="<?php echo get_site_url()?>/get-involved/get-involved-1/">Get
+								Involved</a></li>
+						<li
+							class="<?php if($menu_slug == 'program-services') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-493"
+							id="menu-item-493"><a style="font-family: 'Clarendon'; font-size: 16px !important;"
+							href="<?php echo get_site_url()?>/program-services/addiction-treatment/">Program
+								Services</a></li>
+						<li
+							class="<?php if($menu_slug == 'news-events') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-494"
+							id="menu-item-494"><a style="font-family: 'Clarendon'; font-size: 16px !important;"
+							href="<?php echo get_site_url()?>/news-events/press/">News &amp;
+								Events</a></li>
+						<li
+							class="<?php if($menu_slug == 'about') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-495"
+							id="menu-item-495"><a
+							href="<?php echo get_site_url()?>/about/mission-statement/">About</a>
+						</li>
+						<li
+							class="<?php if($menu_slug == 'contact') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page lasted menu-item-496"
+							id="menu-item-496"><a
+							href="<?php echo get_site_url()?>/contact/info/">Contact</a></li>
 					</ul>
 					
 				</div>
