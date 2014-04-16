@@ -207,40 +207,52 @@
 					</div>
 					
 					<div class="shadow">
-						<a target="_blank" href="#">
-							<img src="<?= IMAGES ?>/home/box1.jpg" alt="">
-						</a>
+						<div class="image-box" style="">
+							<a target="_blank" href="#">
+								<img src="<?= IMAGES ?>/home/box1.jpg" alt="">
+							</a>
+						</div>
 						<p><a target="_blank" href="#">Learn About Our Mission</a></p>
 					</div>
 					<div class="shadow">
-						<a target="_blank" href="#">
-							<img src="<?= IMAGES ?>/home/box2.jpg" alt="">
-						</a>
+						<div class="image-box" style="">
+							<a target="_blank" href="#">
+								<img src="<?= IMAGES ?>/home/box2.jpg" alt="">
+							</a>
+						</div>
 						<p><a target="_blank" href="#">Our Community</a></p>
 					</div>
 					
 					<div class="shadow">
-						<a target="_blank" href="#">
-							<img src="<?= IMAGES ?>/home/box3.jpg" alt="">
-						</a>
+						<div class="image-box" style="">
+							<a target="_blank" href="#">
+								<img src="<?= IMAGES ?>/home/box3.jpg" alt="">
+							</a>
+						</div>
 						<p><a target="_blank" href="#">The Many Ways You Can Help</a></p>
 					</div>
 					<div class="shadow">
-						<a target="_blank" href="#">
-							<img src="<?= IMAGES ?>/home/box4.jpg" alt="">
-						</a>
+						<div class="image-box" style="">
+							<a target="_blank" href="#">
+								<img src="<?= IMAGES ?>/home/box4.jpg" alt="">
+							</a>
+						</div>
 						<p><a target="_blank" href="#">Lorem Ipsum</a></p>
 					</div>
 					<div class="shadow">
-						<a target="_blank" href="#">
-							<img src="<?= IMAGES ?>/home/box5.jpg" alt="">
-						</a>
+						<div class="image-box" style="">
+							<a target="_blank" href="#">
+								<img src="<?= IMAGES ?>/home/box5.jpg" alt="">
+							</a>
+						</div>
 						<p><a target="_blank" href="#">Lorem Ipsum</a></p>
 					</div>
 					<div class="shadow">
-						<a target="_blank" href="#">
-							<img src="<?= IMAGES ?>/home/box6.jpg" alt="">
-						</a>
+						<div class="image-box" style="">
+							<a target="_blank" href="#">
+								<img src="<?= IMAGES ?>/home/box6.jpg" alt="">
+							</a>
+						</div>
 						<p><a target="_blank" href="#">How to Get Help</a></p>
 					</div>
 				</article>

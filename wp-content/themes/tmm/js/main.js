@@ -51,6 +51,7 @@ $(document).ready(function(e) {
 	});
 	
 	$(".tab-tweets").click(function(event) {
+		$("#tabs-1 > div").mCustomScrollbar("scrollTo","top");
 		$(".mCSB_scrollTools").css({"display": "block"});
 		$("ul.title li").removeClass("active");
 		$(".tab-tweets").parent().addClass("active");
@@ -61,6 +62,7 @@ $(document).ready(function(e) {
 		});
 	});
 	$(".tab-facebook").click(function(event) {
+		$("#tabs-2 > div").mCustomScrollbar("scrollTo","top");
 		$("ul.title li").removeClass("active");
 		$(".tab-facebook").parent().addClass("active");
 		
@@ -70,6 +72,7 @@ $(document).ready(function(e) {
 		});		
 	});
 	$(".tab-tumblr").click(function(event) {
+		$("#tabs-3 > div").mCustomScrollbar("scrollTo","top");
 		$("ul.title li").removeClass("active");
 		$(".tab-tumblr").parent().addClass("active");
 		
@@ -141,14 +144,16 @@ $(document).ready(function(e) {
 					case 'link':
 						$(".facebooks").append( "<li><p><span style=\"font-family: 'HelveticaNeue-Bold';\">" + post["from"]['name'] + "</span></p><p style=\"display: block;\">" + post["caption"]  + "</p><p><a style=\"color: #8dd6f5; display: block; text-align: right;\" target=\"_blank\" href=\"" + post["link"] + "\">Read more</a></p></li>" );
 						break;
-				} 
-				
+				}
 			}
 			
 			$("#tabs-2 > div").mCustomScrollbar({
 				scrollButtons:{
 					enable:true
-				}
+				},
+				advanced:{
+			        updateOnContentResize: true
+			    }
 			});
 		}
 	});
@@ -178,7 +183,10 @@ $(document).ready(function(e) {
 			$("#tabs-3 > div").mCustomScrollbar({
 				scrollButtons:{
 					enable:true
-				}
+				},
+				advanced:{
+			        updateOnContentResize: true
+			    }
 			});
 		}
 	});

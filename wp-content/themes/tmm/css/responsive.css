@@ -105,7 +105,8 @@ a img {
 
 .container {
     margin: 0 auto;
-    max-width: 1100px;
+    /*max-width: 1100px;*/
+    width: 1100px;
     position: relative;
 }
 
@@ -130,6 +131,7 @@ header {
 	background: linear-gradient( #2f2f2f, #000000 );
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f2f', endColorstr='#000000',GradientType=0 );
 	min-height: 100px;
+	min-width: 1100px;
 }
 
 .header-bottom {
@@ -417,20 +419,30 @@ article > div:not(.double):hover {
     background-color: #B4D0FA;
 }
 
+article > div > div.image-box {
+	height: 118px;
+    margin: 7px 7px 0;
+}
+
 article > div img {
-    border-radius: 15px;
-    margin: 0 auto;
+	border-radius: 15px;
+    overflow: hidden;
     max-height: 100%;
+    margin: 0 auto;
     max-width: 100%;
-    padding: 7px 0 0;
+    padding: 0;
+    position: inherit;
     
-    -moz-box-shadow:    0 2px 0 0 #CCCCCC;
-	-webkit-box-shadow: 0 2px 0 0 #CCCCCC;
-	box-shadow:         0 2px 0 0 #CCCCCC;
+    -moz-box-shadow:    0px 0px 0px 1px #CCCCCC;
+	-webkit-box-shadow: 0px 0px 0px 1px #CCCCCC;
+	box-shadow:         0px 0px 0px 1px #CCCCCC;
+}
+article > div:last-child > div.image-box img {
+	
 }
 
 article > div p {
-	margin: 0;
+	margin: 0 10px;
 }
 
 article > div p a {
@@ -460,7 +472,8 @@ footer {
 .footer_ctn {
     color: #FFFFFF;
     margin: 0 auto;
-    max-width: 1100px;
+    /*max-width: 1100px;*/
+    width: 1100px;
     text-align: center;    
 }
 
@@ -481,7 +494,7 @@ footer {
 /* ============================================= */
 /* 					RESPONSIVE					 */
 /* ============================================= */
-
+/*
 @media screen and (max-width: 1100px) {
 	
 }
@@ -501,7 +514,7 @@ footer {
 	}
 	article > div:nth-child(3n+3) {
 	    margin-right: 0%;
-	}
+	}	
 }
 
 @media screen and (max-width: 640px) {
@@ -515,7 +528,9 @@ footer {
 	article > div {
 	    margin-right: 4%;
 	    width: 30%;
-	    height: 160px;
+	}
+	article > div:not(.double) {
+	    height: 125px;
 	}
 	article > div.double {
 		margin-right: 0%;
@@ -529,6 +544,14 @@ footer {
 	}
 	article > div:nth-child(3n+5) {
 	    margin-right: 0%;
+	}
+	
+	article > div > div.image-box {
+		height: 70px;
+	}
+	article > div p a {
+		font-size: 14px;
+   		line-height: 18px;
 	}
 }
 
@@ -562,7 +585,6 @@ footer {
 	article > div {
 	    margin-right: 5%;
 	    width: 47%;
-	    height: auto;
 	}
 	article > div.double {
 		margin-right: 0%;
@@ -574,8 +596,19 @@ footer {
 	article > div:nth-child(3n+3) {
 	    margin-right: 5%;
 	}
+	article > div:nth-child(3n+5) {
+	    margin-right: 5%;
+	}
 	article > div:nth-child(2n+2) {
 	    margin-right: 0%;
+	}
+	
+	article > div > div.image-box {
+		height: 85px;
+	}
+	article > div p a {
+		font-size: 12px;
+   		line-height: 15px;
 	}
 }
 
@@ -592,8 +625,29 @@ footer {
 	ul.social li:first-child {
 		display: block;
 	}
+	
+	article > div {
+	    margin-right: 0%;
+	    width: 100%;
+	}
+	article > div.double {
+		margin-right: 0%;
+	    width: 100%;
+	}
+	article > div:nth-child(4n+4) {
+	    margin-right: 0%;
+	}
+	article > div:nth-child(3n+3) {
+	    margin-right: 0%;
+	}
+	article > div:nth-child(3n+5) {
+	    margin-right: 0%;
+	}
+	article > div:nth-child(2n+2) {
+	    margin-right: 0%;
+	}
 }
-
+*/
 .tabs {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;
@@ -617,15 +671,16 @@ footer {
 }
 
 .tabs ul.title li {
-	background-color: #FFFFFF;
+	background-color: #e5e0d4;
     border: 1px solid #DDDDDD;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: inline-block;
     margin-right: -5px;
 }
 
 .tabs ul.title li.active {
+	background-color: #ffffff;    
 	border-bottom: none;
 }
 
@@ -734,12 +789,17 @@ li.active .tab-tumblr, .tab-tumblr:hover {
 
 .tabs ul.content > li ul {
 	list-style: none;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 .tabs ul.content > li ul li {
+	border-bottom: 1px solid #D7D7D7;
 	display: list-item;
-    list-style: disc outside none;
+    list-style: disc inside none;
+    margin-top: 2px;
+}
+.tabs ul.content > li ul li:last-child {
+	border-bottom: none;
 }
 
 
@@ -749,7 +809,7 @@ li.active .tab-tumblr, .tab-tumblr:hover {
     font-family: 'HelveticaNeue-Light';
     font-size: 14px;
     line-height: 20px;
-    margin: 0;
+    margin: 0 0 0 15px;
     max-height: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -757,6 +817,10 @@ li.active .tab-tumblr, .tab-tumblr:hover {
 }
 .tabs ul.content > li ul li p:first-child {
 	display: inline;
+	margin: 0;
+}
+.tabs ul.content > li ul li p:last-child {
+	margin-bottom: 5px;
 }
 
 .tabs ul.content > li ul li p a {
