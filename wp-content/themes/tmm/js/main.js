@@ -11,7 +11,8 @@ function onYouTubeIframeAPIReady() {
 				videoId : 'VyQxn8KD6YQ',
 				playerVars : {
 					allowScriptAccess : "always",
-					wmode : "opaque"
+					wmode : "opaque",
+					autoplay: 1
 				},
 				events : {}
 			});
