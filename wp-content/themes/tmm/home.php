@@ -143,109 +143,22 @@
 					</div>
 				</div>
 			</div>
-			<?php session_start(); ?>
-			<?php include 'functions/plugins/twitter/twitters.php'; ?>
 			
 			<div class="container">
 				<article>
-					<div class="double shadow">
-						<div class="tabs">
-							<ul class="title">
-								<li class="active"><a class="tab-tweets" ></a></li>
-								<li><a class="tab-facebook"></a></li>
-								<li><a class="tab-tumblr"></a></li>
-							</ul>
-							<ul class="content">
-								<li id="tabs-1" class="tab-content">
-									<div id="tabs-1-container" >
-										<ul class="tweets">
-											<?php foreach($tweetsArr as $tw) { ?>
-											<li>										
-												<p><span style="font-family: 'HelveticaNeue-Bold';">#<?= $tw['username'] ?></span> <?= $tw['created_at'] ?></p>
-												<p style="display: block;"><?= $tw['text'] ?></p>
-												<p><a href="<?= $tw['url'] ?>" target="_blank" style="color: #8dd6f5; display: block; text-align: right;">Read more</a></p>
-											</li>
-											<?php } ?>
-										</ul>
-									</div>						
-								</li>
-								<li id="tabs-2" class="tab-content">							
-									<div id="tabs-2-container" >
-										<ul class="facebooks">
-										</ul>
-									</div>
-								</li>
-								<li id="tabs-3" class="tab-content">								
-									<div id="tabs-3-container" >
-										<ul class="tumblrs">
-										</ul>										
-									</div>		
-								</li>
-							</ul>
-						</div>
-						<div class="social-nav">
-							<a class="social-previous"></a>
-							<div class="social-div"></div>
-							<a class="social-next"></a>
-						</div>
-					</div>
-					<div class="double-after">
-					</div>
-					
-					<div class="shadow">
-						<div class="image-box" style="">
-							<a target="_blank" href="#">
-								<img src="<?= IMAGES ?>/home/box1.jpg" alt="">
-							</a>
-						</div>
-						<p><a target="_blank" href="#">Learn About Our Mission</a></p>
-					</div>
-					<div class="shadow">
-						<div class="image-box" style="">
-							<a target="_blank" href="#">
-								<img src="<?= IMAGES ?>/home/box2.jpg" alt="">
-							</a>
-						</div>
-						<p><a target="_blank" href="#">Our Community</a></p>
-					</div>
-					
-					<div class="shadow">
-						<div class="image-box" style="">
-							<a target="_blank" href="#">
-								<img src="<?= IMAGES ?>/home/box3.jpg" alt="">
-							</a>
-						</div>
-						<p><a target="_blank" href="#">The Many Ways You Can Help</a></p>
-					</div>
-					<div class="shadow">
-						<div class="image-box" style="">
-							<a target="_blank" href="#">
-								<img src="<?= IMAGES ?>/home/box4.jpg" alt="">
-							</a>
-						</div>
-						<p><a target="_blank" href="#">Lorem Ipsum</a></p>
-					</div>
-					<div class="shadow">
-						<div class="image-box" style="">
-							<a target="_blank" href="#">
-								<img src="<?= IMAGES ?>/home/box5.jpg" alt="">
-							</a>
-						</div>
-						<p><a target="_blank" href="#">Lorem Ipsum</a></p>
-					</div>
-					<div class="shadow">
-						<div class="image-box" style="">
-							<a target="_blank" href="#">
-								<img src="<?= IMAGES ?>/home/box6.jpg" alt="">
-							</a>
-						</div>
-						<p><a target="_blank" href="#">How to Get Help</a></p>
-					</div>
+					<?php 
+					$page_id = get_the_id('Home Content');
+					$page_home = get_page_by_title('Home Content');
+					echo do_shortcode ($page_home->post_content);
+					?>
+				
 				</article>
 			</div>
 		</div>
 		<a id="startup-video" class="popup-youtube" href="http://www.youtube.com/watch?v=VyQxn8KD6YQ" style="display: none;"></a>
 		<?php get_footer(); ?>
 	</div>
+	
+	<?php wp_footer(); ?> 
 </body>
 </html>

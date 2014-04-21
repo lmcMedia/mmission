@@ -5,6 +5,7 @@
 <link REL="SHORTCUT ICON"
 	href="<?php echo IMAGES?>/midnight_mission.ico" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=1100" />
 
 <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 
@@ -37,7 +38,6 @@ if(is_page('Volunteer 1')){
 <body class="loading">
 	<div class="wrap">
 		<div id="container" class="group">
-		
 			<header>
 				<div class="header-top">
 					<?php
@@ -74,17 +74,17 @@ if(is_page('Volunteer 1')){
 						<ul class="main-menu">
 							<li
 								class="<?php if($menu_slug == 'get-involved') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-492"
-								id="menu-item-492"><a
+								id="menu-item-492"><a style="font-family: 'Clarendon'; font-size: 16px !important;"
 								href="<?php echo get_site_url()?>/get-involved/get-involved-1/">Get
 									Involved</a></li>
 							<li
 								class="<?php if($menu_slug == 'program-services') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-493"
-								id="menu-item-493"><a
+								id="menu-item-493"><a style="font-family: 'Clarendon'; font-size: 16px !important;"
 								href="<?php echo get_site_url()?>/program-services/addiction-treatment/">Program
 									Services</a></li>
 							<li
 								class="<?php if($menu_slug == 'news-events') echo 'current-menu-item'; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-494"
-								id="menu-item-494"><a
+								id="menu-item-494"><a style="font-family: 'Clarendon'; font-size: 16px !important;"
 								href="<?php echo get_site_url()?>/news-events/press/">News &amp;
 									Events</a></li>
 							<li

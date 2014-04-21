@@ -4654,7 +4654,7 @@ ul.header-buttons {
     margin: 0;
     padding: 5px 5% 0 33%;
     text-align: right;
-    width: 62%;
+    width: 63%;
 }
 ul.header-buttons li {
 	display: inline-block;
@@ -4665,37 +4665,57 @@ ul.header-buttons li {
 
 ul.header-buttons li a {
     display: block;
+    /*
     height: 0;
     padding-top: 26.5%;
     width: 100%;
+    */
+    height: 45px;
+    width: 167px;
 }
 
 ul.header-buttons .donate {
-    background: url("../images/header_button.png") no-repeat scroll 0 0 / 400% 200% rgba(0, 0, 0, 0);
+    background-image: url("../images/header_button.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 ul.header-buttons .donate:hover, ul.header-buttons .donate.down {
-    background: url("../images/header_button.png") no-repeat scroll 0 100% / 400% 200% rgba(0, 0, 0, 0);
+    background: url("../images/header_button.png");
+    background-repeat: no-repeat;
+    background-position: 0 -46px;
 }
 
 ul.header-buttons .volunteer {
-    background: url("../images/header_button.png") no-repeat scroll 33% 0  / 400% 200% rgba(0, 0, 0, 0);
+    background: url("../images/header_button.png");
+    background-repeat: no-repeat;
+    background-position: -167px 0;
 }
 ul.header-buttons .volunteer:hover, ul.header-buttons .volunteer.down {
-    background: url("../images/header_button.png") no-repeat scroll 33% 100% / 400% 200% rgba(0, 0, 0, 0);
+    background: url("../images/header_button.png");
+    background-repeat: no-repeat;
+    background-position: -167px -46px;
 }
 
 ul.header-buttons .get-help {
-    background: url("../images/header_button.png") no-repeat scroll 67% 0 / 400% 200% rgba(0, 0, 0, 0);
+    background: url("../images/header_button.png");
+    background-repeat: no-repeat;
+    background-position: -334px 0;
 }
 ul.header-buttons .get-help:hover, ul.header-buttons .get-help.down {
-    background: url("../images/header_button.png") no-repeat scroll 67% 100% / 400% 200% rgba(0, 0, 0, 0);
+    background: url("../images/header_button.png");
+    background-repeat: no-repeat;
+    background-position: -334px -46px;
 }
 
 ul.header-buttons .stories {
-    background: url("../images/header_button.png") no-repeat scroll 100% 0 / 400% 200% rgba(0, 0, 0, 0);
+    background: url("../images/header_button.png");
+    background-repeat: no-repeat;
+    background-position: -501px 0;
 }
 ul.header-buttons .stories:hover, ul.header-buttons .stories.down {
-    background: url("../images/header_button.png") no-repeat scroll 100% 100% / 400% 200% rgba(0, 0, 0, 0);
+    background: url("../images/header_button.png");
+    background-repeat: no-repeat;
+    background-position: -501px -46px;
 }
 
 

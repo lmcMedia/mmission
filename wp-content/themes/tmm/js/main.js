@@ -11,24 +11,35 @@ function onYouTubeIframeAPIReady() {
 				videoId : 'VyQxn8KD6YQ',
 				playerVars : {
 					allowScriptAccess : "always",
-					wmode : "opaque",
-					autoplay: 1
+					wmode : "transparent",
+					autoplay: 1,
+					rel: 0
 				},
-				events : {}
+				events : {
+					'onStateChange': onPlayerStateChange
+				}
 			});
 		}
-	}, 500);
+	}, 500);	
+}
+
+function onPlayerStateChange(event) {
 	
 }
 
 $(window).load(function() {
 	$('.flexslider').flexslider({
-		animation : "fade"
+		animation : "fade",
+		slideshow: false
 	});
 });
 
 $(document).ready(function(e) {
 	isPreloaderComplete = true;
+	
+	if ( (/iphone|ipad|ipod/gi).test(navigator.appVersion) ) {
+		$(".videoWrapper").addClass("ios");
+	}
 	
 	$('.home-slider-bg').blurjs({
 		source: '.home-slider-bg', 
@@ -49,6 +60,8 @@ $(document).ready(function(e) {
 		$('.video-container').css({
 			"display" : "none"
 		});
+		
+		$('.flexslider').flexslider("play");
 	});
 	
 	$(".tab-tweets").click(function(event) {

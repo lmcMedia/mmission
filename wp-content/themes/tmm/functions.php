@@ -942,6 +942,60 @@ function volunteer_step_3_content ($atts, $content = null) {
 }
 add_shortcode('volunteer_step_3_content', 'volunteer_step_3_content');
 /*************** END VOLUNTTER **************/
+
+function social_tabs ($atts, $content = null) {
+	include 'functions/plugins/twitter/twitters.php';
+	
+	$html = '<div class="double shadow">
+						<div class="tabs">
+							<ul class="title">
+								<li class="active"><a class="tab-tweets" ></a></li>
+								<li><a class="tab-facebook"></a></li>
+								<li><a class="tab-tumblr"></a></li>
+							</ul>
+							<ul class="content">
+								<li id="tabs-1" class="tab-content">
+									<div id="tabs-1-container" >
+										<ul class="tweets">';
+											
+	foreach($tweetsArr as $tw) {
+		$html .= '							<li>										
+												<p><span style="font-family: \'HelveticaNeue-Bold\';">#'. $tw['username'] .'</span>'. $tw['created_at'] .'</p>
+												<p style="display: block;">'. $tw['text'] .'</p>
+												<p><a href="'. $tw['url'] .'" target="_blank" style="color: #8dd6f5; display: block; text-align: right;">Read more</a></p>
+											</li>';
+	}
+												
+												
+	$html .= '							</ul>
+									</div>						
+								</li>
+								<li id="tabs-2" class="tab-content">							
+									<div id="tabs-2-container" >
+										<ul class="facebooks">
+										</ul>
+									</div>
+								</li>
+								<li id="tabs-3" class="tab-content">								
+									<div id="tabs-3-container" >
+										<ul class="tumblrs">
+										</ul>										
+									</div>		
+								</li>
+							</ul>
+						</div>
+						<div class="social-nav">
+							<a class="social-previous"></a>
+							<div class="social-div"></div>
+							<a class="social-next"></a>
+						</div>
+					</div>
+					<div class="double-after">
+					</div>';
+	return $html;
+}
+add_shortcode('social_tabs', 'social_tabs');
+
 /************* END SHORT CODE ***************/
 
 // export csv data
