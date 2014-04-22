@@ -187,17 +187,20 @@
 		} else if(currentPer == 100) {
 			clearInterval(displayLoading);
 			
-			if( jpreOptions.autoClose ) {
-				$('#jpreLoader').fadeOut(1000, function() {
+			//max progress bar
+			$(jBar).stop().animate({
+				width: '100%'
+			}, 500, 'linear', function() {
+				//autoclose on
+				if( jpreOptions.autoClose )
 					loadComplete();
-				});
-			}
-			else {
-				$(jButton).show();
-			}
+				else
+					$(jButton).fadeIn(1000);
+			});	
 		}
     	
     }, 50);
+
 	
 	//update progress bar once image loaded
 	var completeLoading = function() {
@@ -218,18 +221,6 @@
 			if (jpreOptions.debugMode) {
 				var error = debug();
 			}
-			
-			
-			//max progress bar
-			$(jBar).stop().animate({
-				width: '100%'
-			}, 500, 'linear', function() {
-				//autoclose on
-				if( jpreOptions.autoClose )
-					loadComplete();
-				else
-					$(jButton).fadeIn(1000);
-			});	
 		}	
 	}
 	

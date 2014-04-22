@@ -34,6 +34,7 @@
 </head>
 
 <body>
+	<img alt="" src="<?= IMAGES ?>/home/home_bar.png" style="display: none">
 	<div class="wrap">
 		<header>
 			<div class="header-top">
