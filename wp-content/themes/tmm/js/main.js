@@ -23,9 +23,7 @@ function onYouTubeIframeAPIReady() {
 	}, 500);	
 }
 
-function onPlayerStateChange(event) {
-	
-}
+function onPlayerStateChange(event) {}
 
 $(window).load(function() {
 	$('.flexslider').flexslider({
@@ -35,7 +33,15 @@ $(window).load(function() {
 });
 
 $(document).ready(function(e) {
-	isPreloaderComplete = true;
+	$('body').jpreLoader({
+		splashID: "#jSplash",
+		loaderVPos: '45%',
+		autoClose: true,
+		showPercentage: false,
+		splashFunction: function() {}
+	}, function() {	//callback function
+		isPreloaderComplete = true;
+	});
 	
 	if ( (/iphone|ipad|ipod/gi).test(navigator.appVersion) ) {
 		$(".videoWrapper").addClass("ios");

@@ -12,10 +12,13 @@
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/jquery.mCustomScrollbar.css"/>
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/flexslider.css"/>
 <link rel="stylesheet" type="text/css" href="<?= CSS ?>/responsive.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<?= CSS ?>/jpreloader.css" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+<script type="text/javascript" src="<?= JS ?>/jpreloader.js"></script>
 
 <script
 	src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/TweenMax.min.js"></script>
