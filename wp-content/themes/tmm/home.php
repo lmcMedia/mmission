@@ -9,32 +9,58 @@
 
 <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="<?= CSS ?>/jquery.mCustomScrollbar.css"/>
-<link rel="stylesheet" type="text/css" href="<?= CSS ?>/flexslider.css"/>
-<link rel="stylesheet" type="text/css" href="<?= CSS ?>/responsive.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="<?= CSS ?>/jpreloader.css" />
+<style>
+
+@font-face {
+	font-family: 'flexslider-icon';
+	src:url('/wp-content/themes/tmm/css/font/flexslider-icon.eot');
+	src:url('/wp-content/themes/tmm/css/font/flexslider-icon.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/themes/tmm/css/font/flexslider-icon.woff') format('woff'),
+		url('/wp-content/themes/tmm/css/font/flexslider-icon.ttf') format('truetype'),
+		url('/wp-content/themes/tmm/css/font/flexslider-icon.svg#flexslider-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="wp-content/themes/tmm/css/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="wp-content/themes/tmm/css/flexslider.css"/>
+<link rel="stylesheet" type="text/css" href="wp-content/themes/tmm/css/responsive.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="wp-content/themes/tmm/css/jpreloader.css" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
-<script type="text/javascript" src="<?= JS ?>/jpreloader.js"></script>
+<script type="text/javascript" src="wp-content/themes/tmm/js/jpreloader.js"></script>
 
 <script
 	src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/TweenMax.min.js"></script>
 
-<script type="text/javascript" src="<?= JS ?>/blur.min.js"></script>
-<script type="text/javascript" src="<?= JS ?>/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="<?= JS ?>/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/tmm/js/blur.min.js"></script>
+<script type="text/javascript" src="wp-content/themes/tmm/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="wp-content/themes/tmm/js/jquery.mCustomScrollbar.min.js"></script>
 
-<script type="text/javascript" src="<?= JS ?>/main.js"></script>
+<script type="text/javascript">
+	<?php 
+		if( isset($_GET['home']) ) {
+			echo 'var reloadSite = 1;';
+		} else {
+			echo 'var reloadSite = 0;';
+		}
+	?>
+</script>
+<script type="text/javascript" src="wp-content/themes/tmm/js/main.js"></script>
 <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 
 <?php wp_head(); ?>
+
 </head>
 
 <body>
-	<img alt="" src="<?= IMAGES ?>/home/home_bar.png" style="display: none">
+	<img alt="" src="/wp-content/themes/tmm/images/home/home_bar.png" style="display: none">
+	<img alt="" src="/wp-content/themes/tmm/images/home/background-slider.jpg" style="display: none">
 	<div class="wrap">
 		<header>
 			<div class="header-top">
@@ -49,8 +75,8 @@
 				
 				<div class="container">
 					
-					<a class="logo" href="<?php echo get_site_url()?>"><img
-						src="<?= IMAGES ?>/logo.png"
+					<a class="logo" href="<?php echo get_site_url()?>?home=true"><img
+						src="/wp-content/themes/tmm/images/logo.png"
 						alt="<?php bloginfo('name'); ?>" /> </a>
 				
 					<ul class="social">
@@ -112,54 +138,16 @@
 				</div>
 			</div>
 		</header>
+		
 		<div class="home-content wrap">
-			<div class="home-slider">
-				<div class="home-slider-bg">
-				</div>
-				<div class="container">
-					<div class="flexslider">
-						<ul class="slides">
-		               	<li>
-				    		<img src="<?= IMAGES ?>/home/slider1.jpg">
-				    	</li>
-				    	<li>
-				    		<img src="<?= IMAGES ?>/home/slider2.jpg">
-				    	</li>
-				    	<li>
-				    		<img src="<?= IMAGES ?>/home/slider3.jpg">
-				    	</li>
-				    	<li>
-				    		<img src="<?= IMAGES ?>/home/slider4.jpg">
-				    	</li>
-				    	<li>
-				    		<img src="<?= IMAGES ?>/home/slider5.jpg">
-				    	</li>
-				    	<li>
-				    		<img src="<?= IMAGES ?>/home/slider6.jpg">
-				    	</li>
-				    	</ul>
-					</div>
-					<div class="video-container" style="display: block">
-						<div class="videoWrapper">
-							<div id="player"></div>		
-						</div>
-						<a class="close-video close-video-home"></a>
-					</div>
-				</div>
-			</div>
-			
-			<div class="container">
-				<article>
-					<?php 
-					$page_id = get_the_id('Home Content');
-					$page_home = get_page_by_title('Home Content');
-					echo do_shortcode ($page_home->post_content);
-					?>
-				
-				</article>
-			</div>
+			<?php 
+			$page_id = get_the_id('Home Content');
+			$page_home = get_page_by_title('Home Content');
+			echo do_shortcode ($page_home->post_content);
+			?>
 		</div>
-		<a id="startup-video" class="popup-youtube" href="http://www.youtube.com/watch?v=VyQxn8KD6YQ" style="display: none;"></a>
+		
+		<a id="startup-video" class="popup-youtube" href="http://www.youtube.com/watch?v=mmMs9NHCePo" style="display: none;"></a>
 		<?php get_footer(); ?>
 	</div>
 	

@@ -8,6 +8,96 @@
 <meta name="viewport" content="width=1100" />
 
 <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+<style>
+/**Import Font Face**/
+@font-face {
+    font-family: 'Clarendon';
+    src: url('/wp-content/themes/tmm/css/font/Clare.eot');
+    src: url('/wp-content/themes/tmm/css/font/Clare.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/tmm/css/font/Clare.svg#Clarendon') format('svg'),
+         url('/wp-content/themes/tmm/css/font/Clare.woff') format('woff'),
+         url('/wp-content/themes/tmm/css/font/Clare.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clarendon-Light';
+    src: url('/wp-content/themes/tmm/css/font/ClareLig.eot');
+    src: url('/wp-content/themes/tmm/css/font/ClareLig.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/tmm/css/font/ClareLig.svg#Clarendon-Light') format('svg'),
+         url('/wp-content/themes/tmm/css/font/ClareLig.woff') format('woff'),
+         url('/wp-content/themes/tmm/css/font/ClareLig.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeue.eot');
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeue.svg#HelveticaNeue') format('svg'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeue.woff') format('woff'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Light';
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeueLight.eot');
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeueLight.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueLight.svg#HelveticaNeueLight') format('svg'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueLight.woff') format('woff'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Bold';
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeue.eot');
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeue.svg#HelveticaNeue') format('svg'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeue.woff') format('woff'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-BoldABC';
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeueBold.eot');
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeueBold.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueBold.svg#HelveticaNeueBoldABC') format('svg'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueBold.woff') format('woff'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-CondensedBold';
+    src: url('font/HelveticaNeueBold/HelveticaNeueBold.eot');
+}
+@font-face {
+    font-family: 'HelveticaNeue-CondensedBold';
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeueBold/HelveticaNeueBold.woff') format('woff'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueBold/HelveticaNeueBold.svg#HelveticaNeue-CondensedBold') format('svg'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueBold/HelveticaNeueBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Medium';
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeueMedium.eot');
+    src: url('/wp-content/themes/tmm/css/font/HelveticaNeueMedium.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueMedium.svg#HelveticaNeueMedium') format('svg'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueMedium.woff') format('woff'),
+         url('/wp-content/themes/tmm/css/font/HelveticaNeueMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"
 	type="text/css" media="screen" />
@@ -51,7 +141,7 @@ if(is_page('Volunteer 1')){
 					
 					<div class="container">
 						
-						<a class="logo" href="<?php echo get_site_url()?>"><img
+						<a class="logo" href="<?php echo get_site_url()?>?home=true"><img
 							src="<?= IMAGES ?>/logo.png"
 							alt="<?php bloginfo('name'); ?>" /> </a>
 					

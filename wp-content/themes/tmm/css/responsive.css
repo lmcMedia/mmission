@@ -251,7 +251,7 @@ ul.header-buttons {
     margin: 0;
     padding: 5px 5% 0 33%;
     text-align: right;
-    width: 63%;
+    width: 62%;
 }
 ul.header-buttons li {
 	display: inline-block;
@@ -296,23 +296,23 @@ ul.header-buttons .volunteer:hover, ul.header-buttons .volunteer.down {
 ul.header-buttons .get-help {
     background: url("../images/header_button.png");
     background-repeat: no-repeat;
-    background-position: -334px 0;
+    background-position: -337px 0;
 }
 ul.header-buttons .get-help:hover, ul.header-buttons .get-help.down {
     background: url("../images/header_button.png");
     background-repeat: no-repeat;
-    background-position: -334px -46px;
+    background-position: -337px -46px;
 }
 
 ul.header-buttons .stories {
     background: url("../images/header_button.png");
     background-repeat: no-repeat;
-    background-position: -501px 0;
+    background-position: -505px 0;
 }
 ul.header-buttons .stories:hover, ul.header-buttons .stories.down {
     background: url("../images/header_button.png");
     background-repeat: no-repeat;
-    background-position: -501px -46px;
+    background-position: -505px -46px;
 }
 
 
@@ -321,16 +321,22 @@ ul.header-buttons .stories:hover, ul.header-buttons .stories.down {
 /* ============================================= */	
 
 .home-content {
-	background: url("../images/home/background-home.jpg") no-repeat scroll 0 bottom / 100% 100% rgba(0, 0, 0, 0);
+	background: url("../images/home/background-home.jpg") no-repeat scroll center bottom rgba(0, 0, 0, 0);
     margin: 0 auto;
     text-align: center;	
 }
 
 .home-slider {
+	background: url("../images/home/background-slider.jpg") repeat scroll center 0 rgba(0, 0, 0, 0) !important;
+	background-size: 100% auto;
+	max-height: 403px;
+	/*height: 395px;
 	max-height: 395px;
-	position: relative;	
+	position: relative;*/	
 }
-
+.flexslider {
+	height: 395px;
+}
 .home-slider-bg {
 	background: url("../images/home/background-slider.jpg");
 	background-position: center center !important; 
@@ -345,6 +351,38 @@ ul.header-buttons .stories:hover, ul.header-buttons .stories.down {
 .home-container {
 	max-width: 1100px;
 	margin: 0 auto;	
+}
+
+.flexslider .slides {
+	background-color: #000000;
+}
+
+.slide-content {
+	height: 100%;
+    left: 40px;
+    position: absolute;
+    right: 40px;
+    text-align: left;
+    top: 0;
+    width: auto;
+}
+
+.slide-content p {
+	color: #FFFFFF;
+    font-family: 'Clarendon';
+    margin: 0;
+    padding: 0;
+}
+
+.slide-content p a.read-more {
+	background: url("../images/home/more.png") no-repeat scroll left 6px rgba(0, 0, 0, 0);
+    color: #A76F26;
+    display: block;
+    float: left;
+    font-family: 'Clarendon';
+    font-size: 15px;
+    line-height: 20px;
+    padding-left: 20px;
 }
 
 /* ============================================= */
@@ -412,13 +450,13 @@ ul.header-buttons .stories:hover, ul.header-buttons .stories.down {
 }
 
 .close-video {
-	background: url("../images/close-video.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("../images/home/close.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     display: block;
-    height: 27px;
+    height: 48px;
     position: absolute;
     right: 10px;
     top: 30px;
-    width: 120px;
+    width: 48px;
     z-index: 9999;
 }
 
